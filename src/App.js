@@ -1,9 +1,25 @@
 import React from 'react'
+import { BrowserRouter, Route, Switch } from "react-router-dom"
+import { MainList } from "./pages/MainList"
+import { DetailsPage } from "./pages/DetailsPage"
 
 export const App = () => {
+
   return (
     <div>
-      Find me in src/app.js!
+      <BrowserRouter>
+        <Switch>
+
+          <Route path="/" exact>
+            <MainList />
+          </Route>
+
+          <Route path="/house/:name">
+            <DetailsPage />
+          </Route>
+
+        </Switch>
+      </BrowserRouter>
     </div>
   )
 }
