@@ -1,15 +1,6 @@
 import React from "react"
 import styled from "styled-components/macro"
 
-export const MainListCard = ({ name }) => {
-
-    return (
-        <CardContainer>
-            <h2>{name}</h2>
-        </CardContainer >
-
-    )
-}
 
 export const CardContainer = styled.div`
 background-color:#c5d5cb;
@@ -31,4 +22,15 @@ img{
 @media (min-width: 330px) {
     width: 450px;
 }
-`; 
+`;
+
+export const MainListCard = ({ name }) => {
+
+    return (
+        <CardContainer>
+            <h2>{name}</h2>
+        </CardContainer >
+
+    )
+}
+

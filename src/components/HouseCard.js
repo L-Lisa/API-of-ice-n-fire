@@ -2,8 +2,6 @@ import React, { useState, useEffect } from "react"
 import styled from "styled-components/macro"
 import img from "../images/background.jpg"
 
-
-
 export const CardContainer = styled.div`
 background-image: url(${img});
 background-size:cover;
@@ -13,7 +11,6 @@ height: 100vh;
 display: flex;
 flex-direction: column;
 align-items: center;
-
 h1{
     margin: 0;
     text-align: center;
@@ -52,7 +49,6 @@ div{
     
 }
 `;
-
 export const InfoContainer = styled.section`
 width: 80%;
 margin: 0 auto;
@@ -84,8 +80,6 @@ export const HouseCard = ({ currentLord, overlord, name, region, url, words, coa
             .then(json => setBiglord(json.name))
     }, [overlord])
     console.log(biglord)
-
-
 
     return (
         <CardContainer>
