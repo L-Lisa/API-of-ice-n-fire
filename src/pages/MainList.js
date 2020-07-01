@@ -4,9 +4,9 @@ import styled from "styled-components"
 import { Link } from "react-router-dom"
 
 export const MainList = () => {
-    //API fetch
-    const GOT_URL = "https://www.anapioficeandfire.com/api/houses"
-    const [houses, setHouses] = useState("")
+    //Fetch houses
+    const GOT_URL = "https://www.anapioficeandfire.com/api/houses?page=1&pageSize=100"
+    const [houses, setHouses] = useState([])
 
     useEffect(() => {
         fetch(GOT_URL)
@@ -21,7 +21,6 @@ export const MainList = () => {
         <MainListSection>
             <h1 >The Houses of Game of Thrones</h1>
             {houses.map((oneHouse) => (
-
                 <Link to={`house/${oneHouse.name}`} key={oneHouse.name}>
                     <MainListCard {...oneHouse} />
                 </Link>
